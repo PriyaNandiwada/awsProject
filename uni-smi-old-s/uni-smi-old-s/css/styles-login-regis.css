@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 13px Arial, Helvetica, sans-serif;
+    color: #444;
+}
+
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+
+td {
+    font-size:13px;
+}
+
+strong, b {
+font-weight: bold;
+}
+
+a { color: #7A2553; text-decoration:none;}
+
+a:hover, a div:hover{ color: #7A2553; text-decoration:underline;}
+
+a:active { color: #7A2553; }
+/*
+----------------
+*/
+/*
+----------------
+*/
+
+.content-container {
+    float: left;
+    width: 940px;
+    border-bottom: 1px solid #a0a0a0;
+    margin: 0;
+    padding: 0;
+}
+
+.prod-links-white {
+    float: left;
+    width: 620px;
+    padding: 0;
+    margin: 0 10px 0 0;
+    /*height:425px;*/
+    text-align:center;
+    border-top: 1px solid #fff;
+    position: relative;
+    z-index: inherit;
+    zoom: 1; /* For IE6 */
+}
+
+table.formAreaTable {
+    padding: 0;
+    border-collapse: collapse;
+}
+
+table.w615 {
+width: 620px;
+}
+
+table.formAreaTable th { 	
+    color:#fff;
+    font-weight:bold;
+    height:31px;
+    border-bottom: 1px solid #fff;
+    text-align:left;
+    margin: 0;
+    padding: 0px 5px 0px 10px;
+}
+
+table.w615 th {
+    background: #a0a0a0 url(C:/Users/Samsung/Desktop/Template/img/th620_bg.png) no-repeat top left;
+}
+
+table.formAreaTable td.padding {
+    padding: 7px;
+    
+}
+
+table.formAreaTable td.bb {
+    border-bottom: 1px solid #fff;
+
+}
+
+table.formAreaTable td {
+    text-align:left;
+    margin: 0;
+    padding: 2px 5px 2px 5px;
+}
+
+* { padding: 0; margin: 0; }
+
+
+table.formAreaTable td.br, table.formAreaTable th.br {
+    border-right: 1px solid #fff;
+
+}
+table.formAreaTable td.gray {
+    background-color: #dfdfdf;
+    color:#444;
+    
+}
+table.formAreaTable td.gray1 {
+    background-color: #ebebeb;
+    
+}
+table.formAreaTable td.gray2 {
+    background-color: #f5f5f5;
+    
+}
+
+input.entryfield {
+    height: 18px;
+    border: 1px solid #999;
+
+}
+input.entryfield:hover {
+    border: 1px solid #0077AA;
+
+}
+
+input.btn_blue {
+    color:white;
+    background-color:transparent;
+    background-image:url('C:/Users/Samsung/Desktop/Template/img/btn_blue_large.png');
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+
+input.btn_large {
+    margin:5px 0 0 0;
+    padding:0;
+    padding-bottom:4px;
+    border:none;
+    text-decoration:none;
+    width:262px;
+    height:33px;
+    font-size:14px;
+    font-weight:normal;
+    text-align:center;
+}
+
+
+/*
+----------------
+*/
+
+/*
+----------------
+*/
+
+.prod-rechts {
+    float: right;
+    width: 300px;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
+table.w300 {
+    width: 300px;
+
+}
+
+table.w300 th {
+    background: #a0a0a0 url(C:/Users/Samsung/Desktop/Template/img/th300_bg.png) no-repeat top left;
+}
+
+.btn_large a:link, .btn_large a:active, .btn_large a:visited {
+    display: block;
+    text-decoration: none;
+    width: 262px; height: 29px;
+    margin-top: 5px;
+    font-size:14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding-top: 8px;
+    text-align:center;
+}
+
+a.btn_gray {
+    /*color:#555;*/
+    background-image: url('C:/Users/Samsung/Desktop/Template/img/btn_gray_large.png');
+    background-repeat: no-repeat;
+    color:#000000;
+}
+/*
+----------------
+*/
+input.btn_blue_small {
+    color:white;
+    background-color:transparent;
+    background-image:url('C:/Users/Samsung/Desktop/Template/img/btn_blue_small.png');
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+
+input.btn_small {
+    margin:5px 0 0 0;
+    padding:0;
+    padding-bottom:3px;
+    border:none;
+    text-decoration:none;
+    width:129px;
+    height:31px;
+    font-size:13px;
+    font-weight:normal;
+    text-align:center;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<title>www.UniversityMSI.com</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<style>
+			body{background-image:url("img/background.jpg");}
+		</style>
+	</head>
+	<body bgcolor="#f0f0f0">
+		<div class="total">
+			<div class="header">
+				<?php include "header.php"; ?>
+			</div>
+				<table cellpadding="10" width="980" style=" height:auto; background-color: #2E9AFE;">
+					<center>
+						<caption align="Top" style=" height:auto; background-color: #40FF00; border-top-right-radius: 1em; border-top-left-radius: 1em;">
+							<h1>Devenir Member de l&apos;association</h1>
+						</caption>
+					</center>
+					
+					
+					<form action="registrer.php" method="post" name="register" >
+						<tr>
+							<td>Nom</td>
+							<td><input type="text" name="name" value="<?= $person['stud_name'] ?>" size="30" maxlength="30" placeholder="Enter Your Name">
+							</td>
+						</tr>
+						<tr>
+							<td>Prénom</td>
+							<td><input type="text" name="firstname" size="30" maxlength="30" placeholder="Enter Your Prénom">
+							</td>
+						</tr>
+
+						<tr>
+							<td>Gender</td>
+							<td><input type="radio" name="gender" value="male">Male
+							<input type="radio" name="gender" value="female">Female
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Code d ´étudiant</td>
+							<td><input type="text" name="name" size="30" maxlength="30" placeholder="Enter Your Code">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Username:</td>
+							<td><input type="text" name="uname" size="30" maxlength="30" placeholder="Enter Your Username">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+							Semester:</td>
+							<td><select name="semester">
+								<option>Semester 1</option>
+								<option>Semester 2</option>
+								<option>Semester 3</option>
+								<option>Semester 4</option>
+								<option>Semester 5</option>
+								<option>Semester 6</option>
+							</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>mot de passe:</td>
+							<td><input type="password" name="password1" value="<?= $person['stud_password'] ?>" size="20" placeholder="Password">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Confirmer mot de passe:</td>
+							<td><input type="password" name="password2" size="20" placeholder="Password again">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="checkbox" name="checkbox" value="Agree">Agree With Our Rules</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+							<input type="submit" name="submit" value="Créer un compte">
+							<input type="reset" name="reset" value="Reset">
+							</td>
+						</tr>
+					</form>
+					
+					<?php
+					
+						error_reporting(E_ALL ^ E_NOTICE);
+						$username = $_POST['name'];
+						$password1 = $_POST['password1'];
+						$password2 = $_POST['password2'];
+						
+						
+						
+						if(isset($_POST['submit'])){
+							if($password1 == $password2){
+								if($username !='' && $password1 !='' && $password2 !=''){
+									$con = mysql_connect("localhost", "root", "") or die ("Error connection. ".mysql_error());
+									mysql_select_db("uni_smi_db", $con) or die("Error selecting db. ".mysql_error());
+									$query = mysql_query("INSERT INTO student(stud_name, stud_password) VALUES ('$username','$password1')");
+									
+																	
+									$person = mysql_fetch_assoc( $query );
+									if($query){
+										echo "you have Registered!";
+									}else{
+										echo"There is something went wrong!";
+									}
+								}else{
+									echo "Please, Enter the Fields!";
+								}
+						}
+						}else{
+							echo "The Password don´t match!!";
+						}
+					?>
+					
+				</table>
+			<div class="header">
+				<?php include "foott.php"; ?>
+			</div>
+		</div>
+	</body>
+</html>

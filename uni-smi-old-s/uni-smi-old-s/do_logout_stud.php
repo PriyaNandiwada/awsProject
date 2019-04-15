@@ -1,0 +1,23 @@
+<?php
+
+ob_start ();
+ 
+session_start ();
+session_unset ();
+session_destroy ();
+ 
+header ("Location: index.php");
+ob_end_flush ();
+?>
+<body bgcolor="#f0f0f0">
+        <div class="total">
+            <div class="header">
+                <?php include "header.php"; ?>
+            </div>
+
+            <div class="header">
+                <?php include "foott.php"; ?>
+            </div>
+        </div>
+    </body>
+</html>

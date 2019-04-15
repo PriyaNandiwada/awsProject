@@ -1,0 +1,26 @@
+.logo{
+	width: 100%;
+	height: auto;
+}
+
+#footer {
+	height: auto;
+	background-color: #eef3f5;
+	padding:  auto;
+    width:980px;
+    background: #2E9AFE;
+    min-height: 130px;
+	margin: 1px 22px;
+}
+
+#footer a {
+	padding-left: 25px;
+	color: blue;
+	text-decoration: none;
+	background: transparent;
+	display: inline-block;
+	line-height: 18px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
